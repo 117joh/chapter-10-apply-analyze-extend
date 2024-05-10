@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- kai Alexandre , 5/9/2024 -->
+<html lang="en">
+<head>
+	<title></title>
+    <link rel="stylesheet" href="styles10.css">
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<div id="container">
+
+        <header>
+            <h1>Visit the Caribbean</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+           <p>The Caribbean boasts several island hotspots for your perfect getaway! Enjoy crystal clear waters, sandy white beaches, and never-ending sun. Click the pictures below for a larger view.</p>
+
+            <figure>
+
+                <img src="images/trunk-bay-thumb.jpg" alt="Elevated view of Trunk Bay beach on St. John">
+                <img src="images/sanjuan-thumb.jpg" alt="Elevated view of San Juan coast">
+                <img src="images/curacao-thumb.jpg" alt="The blue waters of Curacao">
+
+           </figure>
+            
+            <figure id="placeholder">
+            
+                <img src="image" alt="placeholder" id="image">
+                <figcaption></figcaption>
+            
+            </figure>
+
+        </main>
+        <script>
+        var figElement = document.getElementById("placeholder");
+        var imgSource = document.getElementById("image");
+        var figCap = document.querySelector("figcaption");
+       
+       
+        function pic1() {
+            imgSource.src = "images/trunk-bay.jpg";
+            imgSource.alt = "Elevated view of Trunk Bay beach on St. John";
+            figCap.textContent = "Trunk Bay Beach";
+        }
+
+        function pic2() {
+            imgSource.src = "images/sanjuan.jpg";
+            imgSource.alt = "Elevated view of San Juan coast";
+            figCap.textContent = "Coast of San Juan";
+        }
+
+        function pic3() {
+            imgSource.src = "images/curacao.jpg";
+            imgSource.alt = "The blue waters of Curacao";
+            figCap.textContent = "Curacao";
+        }
+        </script>
+
+<figure>
+    <img src="images/trunk-bay-thumb.jpg" alt="Elevated view of Trunk Bay beach on St. John" onclick="pic1()">
+    <!-- Add onclick event handler calling pic1() function -->
+    <img src="images/sanjuan-thumb.jpg" alt="Elevated view of San Juan coast" onclick="pic2()" >
+    <img src="images/curacao-thumb.jpg" alt="The blue waters of Curacao" onclick="pic3()"">
+</figure>
+
+        <footer>
+            <p>Student's Name:kai alexandre </p>
+        </footer>
+        
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
